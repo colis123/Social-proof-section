@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  //Primary Colors
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  //Neutral Colors
+  --dark-gray-magenta: hsl(303, 10%, 53%);
+  --light-gray-magenta: hsl(300, 24%, 96%);
+  --white: white;
+
+  // Font Size  400, 500, 700
+  --body-font: 15px;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: var(--body-font);
+  background: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.header {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1rem;
+    color: var(--very-dark-magenta);
+  }
+
+  p {
+    color: var(--dark-gray-magenta);
+  }
+}
+
+.review-stars {
+  display: grid;
+  gap: 1rem;
+
+  .stars-card {
+    background-color: var(--light-gray-magenta);
+    border-radius: 8px;
+    display: grid;
+    gap: 1rem;
+    margin-right: 0 .5rem;
+    padding: 1rem;
+
+    .star-name {
+      text-align: center;
+      color: var(--very-dark-magenta);
+      font-weight: 500;
+    }
+  }
+
+  // Stars in Cards
+  .stars1,
+  .stars2,
+  .stars3 {
+    display: flex;
+    justify-content: center;
+
+    img {
+      margin: .25rem;
+    }
+  }
+}
+
+.review-cards {
+  display: grid;
+  gap: 1rem;
+
+  .review-card {
+    color: var(--white);
+    background: var(--very-dark-magenta);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+}
